@@ -1,0 +1,36 @@
+/* line 4, /home/zekitow/Projects/groselha-ui/app/assets/stylesheets/_groselha-labels.css.sass */
+.lb {
+  border-bottom: 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.5);
+  font-size: 0.8em;
+  font-family: "Roboto", "Times New Roman", serif;
+  font-weight: 500;
+  background-color: #f8f8f8;
+  background-image: -webkit-linear-gradient(top, #f8f8f8, #f1f1f1);
+  background-image: linear-gradient(to bottom,#f8f8f8, #f1f1f1);
+  margin: 10px;
+  outline: none;
+  padding: 3px 15px;
+  color: #333333;
+}
+/* line 13, /home/zekitow/Projects/groselha-ui/app/assets/stylesheets/_groselha-labels.css.sass */
+.lb.blue {
+  background-color: #0e83cd;
+  background-image: -webkit-linear-gradient(top, #0e83cd, #0e83ff);
+  background-image: linear-gradient(to bottom,#0e83cd, #0e83ff);
+  color: white;
+}
+/* line 17, /home/zekitow/Projects/groselha-ui/app/assets/stylesheets/_groselha-labels.css.sass */
+.lb.green {
+  background-color: #41ab6b;
+  background-image: -webkit-linear-gradient(top, #41ab6b, #41ab71);
+  background-image: linear-gradient(to bottom,#41ab6b, #41ab71);
+  color: white;
+}
+/* line 21, /home/zekitow/Projects/groselha-ui/app/assets/stylesheets/_groselha-labels.css.sass */
+.lb.red {
+  background-color: #c83227;
+  background-image: -webkit-linear-gradient(top, #c83227, #db5147);
+  background-image: linear-gradient(to bottom,#c83227, #db5147);
+  color: white;
+}
