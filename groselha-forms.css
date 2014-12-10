@@ -1,32 +1,38 @@
-/* line 4, /home/zekitow/Projects/groselha-ui/app/assets/stylesheets/_groselha-forms.css.sass */
-input[type=text] {
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  transition: all 0.2s;
-  font-family: "Roboto Slab", "Times New Roman", serif;
-  padding: 10px;
-  border: 0px;
-  border-bottom: 1px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.5);
-  outline: none;
-}
-/* line 10, /home/zekitow/Projects/groselha-ui/app/assets/stylesheets/_groselha-forms.css.sass */
-input[type=text]:focus {
-  box-shadow: 0 2px 1px rgba(34, 34, 34, 0.9);
+/* line 5, /home/zekitow/Projects/groselha-ui/server/app/assets/stylesheets/_groselha-forms.css.sass */
+form button.inline, form input.inline {
+  margin: -2px;
 }
 
-/* line 13, /home/zekitow/Projects/groselha-ui/app/assets/stylesheets/_groselha-forms.css.sass */
+/* line 8, /home/zekitow/Projects/groselha-ui/server/app/assets/stylesheets/_groselha-forms.css.sass */
+input[type=text] {
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  transition: all 0.1s;
+  font-family: "Roboto Slab", "Times New Roman", serif;
+  border-bottom: 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border: 0px;
+  outline: none;
+  height: 20px;
+}
+/* line 15, /home/zekitow/Projects/groselha-ui/server/app/assets/stylesheets/_groselha-forms.css.sass */
+input[type=text]:focus {
+  box-shadow: 0px 3px 3px 0px rgba(34, 34, 34, 0.9);
+}
+
+/* line 18, /home/zekitow/Projects/groselha-ui/server/app/assets/stylesheets/_groselha-forms.css.sass */
 button {
-  -webkit-transition: all 0.25s;
-  -moz-transition: all 0.25s;
-  transition: all 0.25s;
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  transition: all 0.1s;
   font-size: 0.8em;
   font-family: "Roboto", "Times New Roman", serif;
   font-weight: 500;
+  border-bottom: 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
   padding: 10px;
   border: 0px;
-  border-bottom: 1px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.5);
   background-color: #f8f8f8;
   background-image: -webkit-linear-gradient(top, #f8f8f8, #f1f1f1);
   background-image: linear-gradient(to bottom,#f8f8f8, #f1f1f1);
@@ -34,35 +40,36 @@ button {
   outline: none;
   padding: auto 8px;
   color: #333333;
+  min-height: 40px;
 }
-/* line 23, /home/zekitow/Projects/groselha-ui/app/assets/stylesheets/_groselha-forms.css.sass */
-button:hover {
-  box-shadow: 0px 2px 1px rgba(102, 102, 102, 0.8);
+/* line 29, /home/zekitow/Projects/groselha-ui/server/app/assets/stylesheets/_groselha-forms.css.sass */
+button:hover, button:focus {
+  box-shadow: 0px 3px 3px 0px rgba(102, 102, 102, 0.8);
   background: rgba(255, 255, 255, 0.05);
   color: #333333;
 }
-/* line 28, /home/zekitow/Projects/groselha-ui/app/assets/stylesheets/_groselha-forms.css.sass */
+/* line 34, /home/zekitow/Projects/groselha-ui/server/app/assets/stylesheets/_groselha-forms.css.sass */
 button:active {
-  -webkit-transform: scale(0.9);
-  -moz-transform: scale(0.9);
-  -ms-transform: scale(0.9);
-  transform: scale(0.9);
+  -webkit-transform: scale(0.95);
+  -moz-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  transform: scale(0.95);
 }
-/* line 31, /home/zekitow/Projects/groselha-ui/app/assets/stylesheets/_groselha-forms.css.sass */
+/* line 37, /home/zekitow/Projects/groselha-ui/server/app/assets/stylesheets/_groselha-forms.css.sass */
 button.blue {
   background-color: #0e83cd;
   background-image: -webkit-linear-gradient(top, #0e83cd, #0e83ff);
   background-image: linear-gradient(to bottom,#0e83cd, #0e83ff);
   color: white;
 }
-/* line 35, /home/zekitow/Projects/groselha-ui/app/assets/stylesheets/_groselha-forms.css.sass */
+/* line 41, /home/zekitow/Projects/groselha-ui/server/app/assets/stylesheets/_groselha-forms.css.sass */
 button.green {
   background-color: #41ab6b;
   background-image: -webkit-linear-gradient(top, #41ab6b, #41ab71);
   background-image: linear-gradient(to bottom,#41ab6b, #41ab71);
   color: white;
 }
-/* line 39, /home/zekitow/Projects/groselha-ui/app/assets/stylesheets/_groselha-forms.css.sass */
+/* line 45, /home/zekitow/Projects/groselha-ui/server/app/assets/stylesheets/_groselha-forms.css.sass */
 button.red {
   background-color: #c83227;
   background-image: -webkit-linear-gradient(top, #c83227, #db5147);
@@ -70,38 +77,38 @@ button.red {
   color: white;
 }
 
-/* line 45, /home/zekitow/Projects/groselha-ui/app/assets/stylesheets/_groselha-forms.css.sass */
+/* line 51, /home/zekitow/Projects/groselha-ui/server/app/assets/stylesheets/_groselha-forms.css.sass */
 form.blue button {
   background-color: #0e83cd;
   background-image: -webkit-linear-gradient(top, #0e83cd, #0e83ff);
   background-image: linear-gradient(to bottom,#0e83cd, #0e83ff);
   color: rgba(255, 255, 255, 0.8);
 }
-/* line 49, /home/zekitow/Projects/groselha-ui/app/assets/stylesheets/_groselha-forms.css.sass */
+/* line 55, /home/zekitow/Projects/groselha-ui/server/app/assets/stylesheets/_groselha-forms.css.sass */
 form.blue input[type=text]:focus {
-  box-shadow: 0 2px 1px rgba(14, 131, 205, 0.8);
+  box-shadow: 0px 3px 3px 0px rgba(14, 131, 205, 0.8);
 }
 
-/* line 54, /home/zekitow/Projects/groselha-ui/app/assets/stylesheets/_groselha-forms.css.sass */
+/* line 60, /home/zekitow/Projects/groselha-ui/server/app/assets/stylesheets/_groselha-forms.css.sass */
 form.green button {
   background-color: #41ab6b;
   background-image: -webkit-linear-gradient(top, #41ab6b, #41ab71);
   background-image: linear-gradient(to bottom,#41ab6b, #41ab71);
   color: rgba(255, 255, 255, 0.8);
 }
-/* line 58, /home/zekitow/Projects/groselha-ui/app/assets/stylesheets/_groselha-forms.css.sass */
+/* line 64, /home/zekitow/Projects/groselha-ui/server/app/assets/stylesheets/_groselha-forms.css.sass */
 form.green input[type=text]:focus {
-  box-shadow: 0 2px 1px rgba(65, 171, 107, 0.8);
+  box-shadow: 0px 3px 3px 0px rgba(65, 171, 107, 0.8);
 }
 
-/* line 63, /home/zekitow/Projects/groselha-ui/app/assets/stylesheets/_groselha-forms.css.sass */
+/* line 69, /home/zekitow/Projects/groselha-ui/server/app/assets/stylesheets/_groselha-forms.css.sass */
 form.red button {
   background-color: #c83227;
   background-image: -webkit-linear-gradient(top, #c83227, #db5147);
   background-image: linear-gradient(to bottom,#c83227, #db5147);
   color: rgba(255, 255, 255, 0.8);
 }
-/* line 67, /home/zekitow/Projects/groselha-ui/app/assets/stylesheets/_groselha-forms.css.sass */
+/* line 73, /home/zekitow/Projects/groselha-ui/server/app/assets/stylesheets/_groselha-forms.css.sass */
 form.red input[type=text]:focus {
-  box-shadow: 0 2px 1px rgba(200, 50, 39, 0.8);
+  box-shadow: 0px 3px 3px 0px rgba(200, 50, 39, 0.8);
 }
