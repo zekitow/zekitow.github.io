@@ -36,8 +36,9 @@ Scenario: Manager should be able to see the pending approval working hours of my
 
 Note that the feature can be used as a documentation and have the pre-conditions (**given**), actions (**when**) and assertions (**then**), so anyone can quickly understand whats the behavior of the software.
 
+<!-- 
 ## Who these techniques can save money?
 
-In 2014 I had started working with a digital agency based in Sorocaba. At that time they didn't have a automated workflow inside the company to manage the jobs between their client and the team. So I was contracted to develop a time-tracking and job-management platform.
+In 2014 I had started to work with a customer based in Sorocaba. This customer was a digital agency and at that time they didn't have a automated workflow inside the company to manage the jobs between their client and the team. So I was contracted to develop a time-tracking and job-management platform.
 
-I have worked inside the client for more them one year understading the job flow, developing and improving the system alone.
+ -->
