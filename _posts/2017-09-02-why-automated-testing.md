@@ -1,8 +1,8 @@
 ---
-title:  "How automated testing can helps you and cut development costs"
+title:  "Why automated testing?"
 date:   2017-09-02 12:16:30
-categories: [tdd, agile, best-practices]
-tags: [tdd, agile, best-practices]
+categories: [testing, agile, best-practices]
+tags: [testing, agile, best-practices]
 ---
 Automated testing is a great way to ensure software quality. The TDD (Test driven development) leads the developers to create simple and maintainable code while BDD (Behavior Driven Development) is responsible to test the connected parts of the software, that is, it's behavior or domain.
 
@@ -36,9 +36,35 @@ Scenario: Manager should be able to see the pending approval working hours of my
 
 Note that the feature can be used as a documentation and have the pre-conditions (**given**), actions (**when**) and assertions (**then**), so anyone can quickly understand whats the behavior of the software.
 
-<!-- 
-## Who these techniques can save money?
 
-In 2014 I had started to work with a customer based in Sorocaba. This customer was a digital agency and at that time they didn't have a automated workflow inside the company to manage the jobs between their client and the team. So I was contracted to develop a time-tracking and job-management platform.
+## Why you should start using it
 
- -->
+If you want to ensure quality on your application, you should have manual testing. But there are some advantages of automated testing that can help you achieve your goals and improve your ROI:
+
+**Regression test in minutes**
+
+Once the test is executed by a machine, you'll be able to test all the application in a few minutes. Then it can save you a lot of time to focus in other activities.
+
+**Can be used as documentation**
+
+The test suite can help new members of the team to understand the application behavior.
+
+**Code refactoring will be much faster and easier**
+
+If your application is well covered by tests you can change everything and quickly ensure you didn't change its behavior.
+
+**Turns the application more reliable**
+
+It removes the human error by performing boring and repetitive tests.
+
+**Your team may be smaller**
+
+You do not need multiple people testing the software manually if you have a test engineer.
+
+**Early bug detection**
+
+Automation help developers to discover more bugs in the early phases of software development and prevent some strange or wrong behavior in a production environment.
+
+## Conclusion
+
+Test automation is not a silver bullet, but it is a strong ally and can bring you more profit than injury and helps your team to not commit some basic errors and reduces the bug insidence by making your team more profitable and smaller.
