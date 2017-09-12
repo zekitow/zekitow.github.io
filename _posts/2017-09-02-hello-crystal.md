@@ -10,26 +10,26 @@ Nowadays (2017/09) we are can see the rising of a new trend with some interestin
 
 ## Trending github projects
 
-** [Kemal](https://github.com/kemalcr/kemal) **: A sinatra-like web framework. Fast and simple which allows you to configure everything according to your needs.
+**[Kemal](https://github.com/kemalcr/kemal)**: A sinatra-like web framework. Fast and simple which allows you to configure everything according to your needs.
 
-** [Amethyst](https://github.com/crystal-community/amethyst) **: A rails-like MVC framework which has some similar patterns if you are coming from Rails (controllers, routes, views, models [amethyst-model])
+**[Amethyst](https://github.com/crystal-community/amethyst)**: A rails-like MVC framework which has some similar patterns if you are coming from Rails (controllers, routes, views, models [amethyst-model])
 
-** [Amber](https://github.com/amberframework/amber) **: It's another rails-like framework, which has the same appeal of Amethyst but this one, include some scaffolding tools.
+**[Amber](https://github.com/amberframework/amber)**: It's another rails-like framework, which has the same appeal of Amethyst but this one, include some scaffolding tools.
 
-** [Awesome Crystal](https://github.com/veelenga/awesome-crystal) **: A huge FAQ, community-driven, repository. Just like "Awesome Ruby", "Awesome Javascript" and so.
+**[Awesome Crystal](https://github.com/veelenga/awesome-crystal)**: A huge FAQ, community-driven, repository. Just like "Awesome Ruby", "Awesome Javascript" and so.
 
 
 ## Hello World
 
 A simple "Hello World" written in Crystal:
 
-```
+```ruby
 puts "Hey, give me a beer, please!"
 ```
 
 Another example using OO approach:
 
-```
+```ruby
 class User
   def initialize(@name : String)
   end
