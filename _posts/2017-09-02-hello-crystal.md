@@ -1,5 +1,5 @@
 ---
-title:  "Hello Crystal?"
+title:  "Hello Crystal"
 date:   2017-09-11 20:55:00
 categories: [crystal]
 tags: [crystal]
@@ -10,24 +10,36 @@ Nowadays (2017/09) we are can see the rising of a new trend with some interestin
 
 ## Trending github projects
 
-**[Kemal](https://github.com/kemalcr/kemal)**: A sinatra-like web framework. Fast and simple which allows you to configure everything according to your needs.
+When I was looking at Crystal frameworks at GitHub I found some interesting frameworks and repositories with an ascending number of stars and watchers.
 
-**[Amethyst](https://github.com/crystal-community/amethyst)**: A rails-like MVC framework which has some similar patterns if you are coming from Rails (controllers, routes, views, models [amethyst-model])
+If you are coming from another framework or technology, these ones may be a good choice for you.
 
-**[Amber](https://github.com/amberframework/amber)**: It's another rails-like framework, which has the same appeal of Amethyst but this one, include some scaffolding tools.
+**[Kemal](https://github.com/kemalcr/kemal)**
 
-**[Awesome Crystal](https://github.com/veelenga/awesome-crystal)**: A huge FAQ, community-driven, repository. Just like "Awesome Ruby", "Awesome Javascript" and so.
+A sinatra-like web framework. Fast and simple which allows you to configure everything according to your needs.
+
+**[Amethyst](https://github.com/crystal-community/amethyst)**
+
+A rails-like MVC framework which has some similar patterns if you are coming from Rails (controllers, routes, views, models [amethyst-model])
+
+**[Amber](https://github.com/amberframework/amber)**
+
+It's another rails-like framework, which has the same appeal of Amethyst but this one, include some scaffolding tools.
+
+**[Awesome Crystal](https://github.com/veelenga/awesome-crystal)**
+
+A huge FAQ, community-driven, repository. Just like "Awesome Ruby", "Awesome Javascript" and so.
 
 
 ## Hello World
 
-A simple "Hello World" written in Crystal:
+As I said before, Crystal looks like Ruby except for small differences. The example above shows a simple "hello world" in Crystal:
 
 ```ruby
 puts "Hey, give me a beer, please!"
 ```
 
-Another example using OO approach:
+This is another example using the OOP approach:
 
 ```ruby
 class User
@@ -45,7 +57,7 @@ user.say_hi
 
 ## Instalation
 
-You can find a more detailed installation guide at the [official documentation website](https://crystal-lang.org/docs/installation/on_debian_and_ubuntu.html).
+The Crystal installation is very simple as any other modern languages you just have to add the source, update and install the package according to your operating system.
 
 ### On Ubuntu-based linux
 
@@ -70,8 +82,78 @@ brew update
 brew install crystal-lang
 ```
 
+You can find a more detailed installation guide at the [official documentation website](https://crystal-lang.org/docs/installation/on_debian_and_ubuntu.html).
+
+
 ## Creating a simple chat using Kemal
 
+This is a short simple example to show how simple is to create a real time application using Crystal could be.
+
+First, create a project named *crystal-chat-example*:
+
 ```
-# TODO
+crystal init app crystal-chat-example
+cd crystal-chat-example
 ```
+
+Now you should edit the file *shard.yml* to add the **Kemal** dependency.
+The *shard.yml* works like the *package.json* from **npm** mixed with *Gemfile* from Ruby.
+
+```yaml
+name: crystal-chat-example
+version: 0.1.0
+
+dependencies:
+  kemal:
+     github: sdogruyol/kemal
+     branch: master
+
+authors:
+  - José Ribeiro <zeca@digup.io>
+
+targets:
+  crystal-chat-example:
+    main: src/crystal-chat-example.cr
+
+crystal: 0.23.1
+
+license: MIT
+```
+
+Then, run the *shards install* to download and install the dependencies.
+
+```
+shards install
+```
+
+After that you will be able to use *Kemal*. Now change the file *src/crystal-chat-example.cr* to the content above:
+
+```ruby
+require "./crystal-chat-example/*"
+require "kemal"
+
+module Crystal::Chat::Example
+  get "/" do |env|
+    render "views/index.ecr"
+  end
+  Kemal.run
+end
+```
+
+And create the view file *views/index.ecr* and run *crystal run src/crystal-chat-example.cr* to see the result at [your localhost](http://localhost:3000/). After these steps you should see a blank page just with an input text and button that does nothing.
+
+```html
+<!doctype html>
+<html>
+<body>
+  <pre id='chat'></pre>
+  <form>
+    <input id='msg' placeholder='message...' />
+    <input type="submit" value="Send">
+  </form>
+</body>
+</html>
+```
+
+
+CONTINUE...
