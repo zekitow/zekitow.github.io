@@ -4,8 +4,6 @@ date:   2017-09-11 20:55:00
 categories: [crystal]
 tags: [crystal]
 ---
-# Hello Crystal Lang!
-
 Crystal is a programming language created in 2011 which was designed to be productive and elegant as Ruby but faster as a compiled language.
 
 Nowadays (2017/09) we are can see the rising of a new trend with some interesting and expressive frameworks that are being built on Crystal.
