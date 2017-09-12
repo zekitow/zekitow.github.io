@@ -4,67 +4,76 @@ date:   2017-09-11 20:55:00
 categories: [crystal]
 tags: [crystal]
 ---
-Automated testing is a great way to ensure software quality. The TDD (Test driven development) leads the developers to create simple and maintainable code while BDD (Behavior Driven Development) is responsible to test the connected parts of the software, that is, it's behavior or domain.
+# Hello Crystal Lang!
 
-Both methods can reduce the incidence of bugs in a production environment and saves a lot of money and time over manual testing.
+Crystal is a programming language created in 2011 which was designed to be productive and elegant as Ruby but faster as a compiled language.
 
-## What is TDD?
+Nowadays (2017/09) we are can see the rising of a new trend with some interesting and expressive frameworks that are being built on Crystal.
 
-TDD is basically a process of writing automated tests to ensure that code works before write the implementation.
+## Trending github projects
 
-There exists 3 main steps which is red, green and refactor. The developer writes the test and runs it before create the implementation (**red**), then writes the implementation and runs it again until it pass (**green**). if needed, the developer can refactory the code (**refactor**). These cycle should be repeated as the developer builds the software.
+** [Kemal](https://github.com/kemalcr/kemal) **: A sinatra-like web framework. Fast and simple which allows you to configure everything according to your needs.
 
-## What is BDD?
+** [Amethyst](https://github.com/crystal-community/amethyst) **: A rails-like MVC framework which has some similar patterns if you are coming from Rails (controllers, routes, views, models [amethyst-model])
 
-BDD is an Agile technique of writing test scenarios defined by business requirements which ensure the software behaves as expected.
+** [Amber](https://github.com/amberframework/amber) **: It's another rails-like framework, which has the same appeal of Amethyst but this one, include some scaffolding tools.
 
-The BDD encourages collaboration between developers, QA and non-technical or business participants in a software project. Let's see how it should look like using [cucumber](https://github.com/cucumber/cucumber-ruby):
+** [Awesome Crystal](https://github.com/veelenga/awesome-crystal) **: A huge FAQ, community-driven, repository. Just like "Awesome Ruby", "Awesome Javascript" and so.
 
-```cucumber
-Feature: Working hours approval
-  As a manager I should be able to approve the working hours of the employees of my team.
 
-Background:
-  Given I'm logged in as manager user
-    And the employee "John" have "3" working hour records waiting for approval
+## Hello World
 
-Scenario: Manager should be able to see the pending approval working hours of my team
-  Given I click on "Time tracking" on menu
-   When I click on "Pending approvals" link
-   Then I should see "3" records marked as "pending" being "John" the author
+A simple "Hello World" written in Crystal:
+
+```
+puts "Hey, give me a beer, please!"
 ```
 
-Note that the feature can be used as a documentation and have the pre-conditions (**given**), actions (**when**) and assertions (**then**), so anyone can quickly understand whats the behavior of the software.
+Another example using OO approach:
 
+```
+class User
+  def initialize(@name : String)
+  end
 
-## Why you should start using it
+  def say_hi
+    puts "Hi #{@name}!"
+  end
+end
 
-If you want to ensure quality on your application, you should have manual testing. But there are some advantages of automated testing that can help you achieve your goals and improve your ROI:
+user = User.new("José")
+user.say_hi
+```
 
-**Regression test in minutes**
+## Instalation
 
-Once the test is executed by a machine, you'll be able to test all the application in a few minutes. Then it can save you a lot of time to focus in other activities.
+You can find a more detailed installation guide at the [official documentation website](https://crystal-lang.org/docs/installation/on_debian_and_ubuntu.html).
 
-**Can be used as documentation**
+### On Ubuntu-based linux
 
-The test suite can help new members of the team to understand the application behavior.
+Add the signing key and the repository configuration and update the packages available:
 
-**Code refactoring will be much faster and easier**
+```
+# apt-key adv --keyserver keys.gnupg.net --recv-keys 09617FD37CC06B54
+# echo "deb https://dist.crystal-lang.org/apt crystal main" > /etc/apt/sources.list.d crystal.list
+# apt-get update
+```
 
-If your application is well covered by tests you can change everything and quickly ensure you didn't change its behavior.
+Then install the Crystal lang compiler and dependencies:
 
-**Turns the application more reliable**
+```
+sudo apt-get install  build-essential crystal
+```
 
-It removes the human error by performing boring and repetitive tests.
+### On Apple using home brew
 
-**Your team may be smaller**
+```
+brew update
+brew install crystal-lang
+```
 
-You do not need multiple people testing the software manually if you have a test engineer.
+## Creating a simple chat using Kemal
 
-**Early bug detection**
-
-Automation help developers to discover more bugs in the early phases of software development and prevent some strange or wrong behavior in a production environment.
-
-## Conclusion
-
-Test automation is not a silver bullet, but it is a strong ally and can bring you more profit than injury and helps your team to not commit some basic errors and reduces the bug insidence by making your team more profitable and smaller.
+```
+# TODO
+```
