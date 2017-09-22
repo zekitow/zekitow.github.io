@@ -162,3 +162,72 @@ Create the view file **views/index.ecr**:
 After that run the command **crystal run src/crystal-chat-example.cr** to start the application at [your localhost](http://localhost:4000/). After these steps you should see a blank page just with an input text and button that does nothing, yet.
 
 ### Adding websocket
+
+Once your application is working is time to create the websocket endpoint. For that we have to create the **chat** route, which will be our bridge between the clients. Edit the file **src/crystal-chat-example.cr** again and add the following content:
+
+```ruby
+  SOCKETS = [] of HTTP::WebSocket
+
+  ws "/chat" do |socket|
+    SOCKETS << socket
+
+    # on message broadcast to clients
+    socket.on_message do |message|
+      SOCKETS.each { |socket| socket.send message}
+    end
+
+    # on close, delete the socket
+    socket.on_close do
+      SOCKETS.delete socket
+    end
+  end
+```
+
+Now let's connect the frontend with backend by modifying **views/index.ecr**:
+
+```html
+<!doctype html>
+<html>
+  <head>
+    <title>Kemal Chat</title>
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+    <script>
+      $(document).ready(function() {
+        var socket = new WebSocket("ws://" + location.host + "/chat");
+        
+        socket.onmessage = function(e) {
+          $('#chat').append(e.data + "\n")
+        };
+
+        $("form").bind('submit', function(e) {
+          socket.send($('#msg').val());
+
+          $('#msg').val(''); $('#msg').focus();
+          e.preventDefault();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <pre id='chat'></pre>
+    <form>
+      <input id='msg' placeholder='message...' />
+      <input type="submit" value="Send">
+    </form>
+  </body>
+</html>
+```
+
+### Time to test!
+
+Run your application again:
+
+```
+crystal run src/crystal-chat-example.cr
+```
+
+And test at [your localhost](http://localhost:4000/):
+
+![kemal](/images/posts/crystal/kemal-chat.gif)
+
+As you can see, Crystal is very simple and intuitive. It's like a Ruby on steroids. This is my bet for the future :)
