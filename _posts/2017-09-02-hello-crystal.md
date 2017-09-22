@@ -87,17 +87,17 @@ You can find a more detailed installation guide at the [official documentation w
 
 ## Creating a simple chat using Kemal
 
-This is a short simple example to show how simple is to create a real time application using Crystal could be.
+This is a short example to show how simple is to create a real time application using Crystal could be.
 
-First, create a project named *crystal-chat-example*:
+First, create a project named **crystal-chat-example**:
 
 ```
 crystal init app crystal-chat-example
 cd crystal-chat-example
 ```
 
-Now you should edit the file *shard.yml* to add the **Kemal** dependency.
-The *shard.yml* works like the *package.json* from **npm** mixed with *Gemfile* from Ruby.
+Now you should edit the file **shard.yml** to add the **Kemal** dependency.
+The *shard.yml* works like the **package.json** from **npm** mixed with **Gemfile** from Ruby.
 
 ```yaml
 name: crystal-chat-example
@@ -120,13 +120,15 @@ crystal: 0.23.1
 license: MIT
 ```
 
-Then, run the *shards install* to download and install the dependencies.
+Then, run the **shards install** to download and install the dependencies.
 
 ```
 shards install
 ```
 
-After that you will be able to use *Kemal*. Now change the file *src/crystal-chat-example.cr* to the content above:
+### Controller
+
+After that you will be able to use **Kemal**. Now change the file **src/crystal-chat-example.cr** with the following content:
 
 ```ruby
 require "./crystal-chat-example/*"
@@ -140,7 +142,9 @@ module Crystal::Chat::Example
 end
 ```
 
-And create the view file *views/index.ecr* and run *crystal run src/crystal-chat-example.cr* to see the result at [your localhost](http://localhost:3000/). After these steps you should see a blank page just with an input text and button that does nothing.
+### View
+
+Create the view file **views/index.ecr**:
 
 ```html
 <!doctype html>
@@ -155,5 +159,6 @@ And create the view file *views/index.ecr* and run *crystal run src/crystal-chat
 </html>
 ```
 
+After that run the command **crystal run src/crystal-chat-example.cr** to start the application at [your localhost](http://localhost:4000/). After these steps you should see a blank page just with an input text and button that does nothing, yet.
 
-CONTINUE...
+### Adding websocket
